@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "server": "json-server --watch data.json --port 9000"
+  },
+
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>BTS-MRT</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+           
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="bar_left.png" alt="bar_left">
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Service 1</a></li>
+                            <li><a class="dropdown-item" href="#">Service 2</a></li>
+                            <li><a class="dropdown-item" href="#">Service 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="Logo"  height="50" class="d-inline-block align-text-top">
+            </a>
+        </div>
+    </nav>
+
+    <div >
+        <img src="common.jpg" alt="people">
+    </div>
+
+    <div class="container text-center">
+        <img src="coint.png" alt="coint">
+        คำนวณค่าโดยสาร
+    </div>
+
+
+
+    <div class="container main-content ">
+        <h1>ต้นทาง</h1>
+        <select id="source">
+            <option value="">โปรดเลือก</option>
+            <option value="กรุงเทพ">กรุงเทพ</option>
+            <!-- เพิ่มต้นทางอื่น ๆ ตามต้องการ -->
+        </select>
+        
+        <h1>ปลายทาง</h1>
+        <select id="destination">
+            <option value="ภูเก็ต">ภูเก็ต</option>
+            <!-- เพิ่มปลายทางอื่น ๆ ตามต้องการ -->
+        </select>
+    </div>
+   
+
+
+    <h1>วันที่ออกเดินทาง</h1>
+    <input type="date" id="travelDate">
+    
+    <button class="btn btn- text-light mb-3 d-block " id="btn" onclick="searchTickets() " >คำนวณค่าโดยสาร</button>
+
+    <div id="results"></div>
+
+    <script>
+        function searchTickets() {
+            var source = document.getElementById("source").value;
+            var destination = document.getElementById("destination").value;
+            var travelDate = document.getElementById("travelDate").value;
+
+            // ส่งข้อมูลไปยังเซิร์ฟเวอร์เพื่อค้นหาตั๋ว
+            // แสดงผลลัพธ์ใน <div id="results"></div>
+        }
+    </script>
+
+
+</body>
+</html>
